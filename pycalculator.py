@@ -24,26 +24,30 @@ print("2. For Subtraction- Enter '-'")
 print("3. For Multiplication- Enter '*'")
 print("4. For Division- Enter '/'")
 
-# Take input from the user
 choice = ""
 
-def checkOperator(choice):
+def checkOperator():
+    # Take input from the user
+    global choice
     choice = input("Enter choice( '+'/ '-'/ '*'/ '/'):")
+
+# Check the operator 
     if choice in operators:
         print("Valid Operator entered")
+        print("Choice: ",choice)
         return True
     else:
         print("Invalid Operator entered!")
         return False
 
 
-while checkOperator(choice) is False:
-    checkOperator(choice)
+while checkOperator() is False:
+    checkOperator()
 
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
 
-
+print(choice)
 
 if choice == '+':
     print(num1,"+",num2,"=", add(num1,num2))
