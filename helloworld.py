@@ -15,6 +15,8 @@ def sum(start, end):
     for i in range(start, end+1):
         result += i
     return result
- 
+
+
+
 sumresult = sum(10, 50)
 printFunction(sumresult)
